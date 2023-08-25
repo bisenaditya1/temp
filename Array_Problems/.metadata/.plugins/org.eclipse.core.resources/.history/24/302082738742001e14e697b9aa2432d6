@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+
+public class Program {
+
+	private static int[] leaderFinder(int[] arr, int n) {
+		ArrayList<Integer> lead = new ArrayList<>();
+		return null;
+	}
+
+	public static void main(String[] args) {
+		int[] arr = { 10, 22, 12, 3, 0, 6 };
+		int n = arr.length;
+		int[] leaders = leaderFinder(arr, n);
+
+	}
+
+}

@@ -1,0 +1,28 @@
+import java.util.Arrays;
+
+public class Program {
+
+	public static void main(String[] args) {
+		int [] arr = {1,4,2,6,4,8,2,9,5};
+		int n = arr.length;
+		int [] larr = leftrotate(arr, n);
+		System.err.println("Before Rotation " );
+		System.out.println(Arrays.toString(arr));
+		System.out.println("After Rotation");
+		System.out.println(Arrays.toString(larr));
+		
+	}
+
+
+	private static int [] leftrotate(int[] arr, int n) {
+		int k = n;
+		int c = arr[0];
+		for(int i=0; i<k-1; i++) {
+			arr[i]=arr[i+1];
+		}
+		arr[arr.length-1]=c;
+		return arr;
+	}
+
+
+}

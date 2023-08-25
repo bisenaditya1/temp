@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Program {
+
+	private static int[] leaderFinder(int[] arr, int n) {
+		ArrayList<Integer> lead = new ArrayList<>();
+		int max = Integer.MIN_VALUE;
+		for (int i = n - 1; i > 0; i--) {
+			if (arr[i] > max) {
+				max = arr[i];
+				System.out.println(max);
+				lead.add(max);
+			}
+			
+		}
+		int k = lead.size();
+		int[] temp = new int[k];
+		for (int i = 0; i < k; i++)
+			arr[i] = lead.get(i);
+
+		return temp;
+	}
+
+	public static void main(String[] args) {
+		int[] arr = { 10, 22, 12, 3, 0, 6 };
+		int n = arr.length;
+		int[] leaders = leaderFinder(arr, n);
+		System.out.println("The leaders are : " + Arrays.toString(leaders));
+
+	}
+
+}

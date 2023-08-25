@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Program {
+
+	private static int[] leaderFinder(int[] arr, int n) {
+		ArrayList<Integer> lead = new ArrayList<>();
+		int max = Integer.MIN_VALUE;
+		for (int i = n - 1; i > 0; i--) {
+			if (arr[i] > max) {
+				max = arr[i];
+				lead.add(max);
+			}
+
+		}
+		Integer[] leader = new Integer[lead.size()];
+		leader = lead.toArray(leader);
+
+		int[] reverse = new int[lead.size()];
+		for (int i = 0; i < lead.size(); i++) {
+			reverse[i] = leader[lead.size() - i-1];
+		}
+
+		return reverse;
+	}
+
+	public static void main(String[] args) {
+		int[] arr = { 10, 22, 12, 3, 0, 6 };
+		int n = arr.length;
+		int[] leaders = leaderFinder(arr, n);
+		System.out.println("The leaders are : " + Arrays.toString(leaders));
+
+	}
+
+}

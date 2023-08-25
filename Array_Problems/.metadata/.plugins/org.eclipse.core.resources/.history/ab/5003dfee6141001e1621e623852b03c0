@@ -1,0 +1,24 @@
+
+public class Prgoram {
+
+	public static void main(String[] args) {
+		int [] arr = {7,1,4,6,3,-15,8,10,9,0,8};
+		System.out.println("The second largest element is " + secondlargest(arr) );
+	//	System.out.println("The second smallest element is " + secondsmallest(arr));
+	}
+
+	private static int secondlargest(int[] arr) {
+		int max = arr[0];
+		int secondmax= arr[0];
+		for (int i=0; i<arr.length; i++) {
+			if(arr[i]>max) {
+				secondmax = max;
+				max = arr[i];
+			}
+		}
+		return max;
+	}
+
+	
+	
+}
